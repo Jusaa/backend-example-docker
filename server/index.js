@@ -72,6 +72,4 @@ app.get('/api*', (req, res) => {
   res.send(hint)
 })
 
-app.listen(PORT, () => {
-  console.log(`Started on port ${PORT}`)
-})
+app.listen(process.env.PORT, '0.0.0.0')
