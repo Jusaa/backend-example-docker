@@ -8,3 +8,6 @@ workflows:
          deploy: false
          image: $DOCKER_LOGIN/$CIRCLE_PROJECT_REPONAME
          tag: 'latest'
+      - run:
+          name: Push to heroku
+          command: heroku container:login
