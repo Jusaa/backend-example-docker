@@ -6,7 +6,6 @@ workflows:
   deploy:
     jobs:
       - docker/publish:
-         deploy: false
          image: $DOCKER_LOGIN/$CIRCLE_PROJECT_REPONAME
          tag: 'latest'
       - heroku/deploy-via-git:
